@@ -4,7 +4,7 @@ console.log("Hello World");
 
 *Este es un código simple en JavaScript que muestra un mensaje "Hola Mundo" en la consola cuando se ejecuta. En lugar de utilizar la función "alert" que muestra una ventana de alerta, utilizamos la función "console.log" para imprimir el mensaje en la consola del navegador o del entorno de desarrollo.*
 
-*Este es un código simple en JavaScript que muestra una ventana de alerta con el mensaje "Hello World" cuando se ejecuta. "alert" es una función incorporada en JavaScript que se utiliza para mostrar ventanas de alerta en un navegador web.*
+*Este es un código simple en JavaScript que muestra una ventana de alerta con el mensaje "Hello World" cuando se ejecuta. "alert" es una función incorporada en JavaScript que se utiliza para mostrar ventanas de alerta en un navegador web*
 
 ```jsx
 let aux = document.querySelector('#theTitle');
