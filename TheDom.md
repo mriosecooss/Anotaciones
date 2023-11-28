@@ -64,3 +64,29 @@ document.body.innerHTML = '<img src="<https://via.placeholder.com/350x150>"/>';
 2. *El contenido que se está estableciendo es una etiqueta de imagen (`<img>`), que tiene su atributo `src` establecido en "https://via.placeholder.com/350x150". Este URL es un enlace a una imagen de marcador de posición de 350x150 píxeles.*
 
 *Cuando este código se ejecuta, reemplaza todo el contenido del cuerpo del documento HTML con la imagen de marcador de posición.*
+
+```jsx
+let beginning = "<ul>";
+let listString = "<li>First Item</li><li>Second Item</li><li>Third Item</li>";
+let ending = "</ul>";
+```
+
+*Este fragmento de código JavaScript está creando una lista HTML no ordenada como una cadena de texto.*
+
+1. *La variable `beginning` se inicializa con el valor `"<ul>"`, que es la etiqueta de apertura para una lista no ordenada en HTML.*
+2. *La variable `listString` se inicializa con el valor `"<li>First Item</li><li>Second Item</li><li>Third Item</li>"`. Esto es una cadena de texto que contiene tres elementos de lista (`<li>`), cada uno con un texto diferente ("First Item", "Second Item", "Third Item").*
+3. *La variable `ending` se inicializa con el valor `"</ul>"`, que es la etiqueta de cierre para una lista no ordenada en HTML.*
+
+*Cuando se concatenan estas tres variables (`beginning + listString + ending`), se obtiene una cadena de texto que representa una lista no ordenada completa en HTML con tres elementos.*
+
+```jsx
+let li = document.querySelector("#secondElement")
+li.parentNode.removeChild(li)
+```
+
+*Este fragmento de código JavaScript está eliminando un elemento específico de una lista HTML en el documento.*
+
+1. *La primera línea `let li = document.querySelector("#secondElement")` está seleccionando el primer elemento HTML en el documento que coincide con el selector "#secondElement". Este selector apunta al elemento con el ID "secondElement". La referencia a este elemento se guarda en la variable `li`.*
+2. *La segunda línea `li.parentNode.removeChild(li)` está eliminando el elemento seleccionado del documento. `li.parentNode` obtiene el nodo padre del elemento seleccionado, que sería el elemento de lista (`<ul>` o `<ol>`) que contiene el elemento de lista (`<li>`) seleccionado. Luego, `removeChild(li)` elimina el elemento seleccionado de este nodo padre.*
+
+*Por lo tanto, si en tu documento HTML tienes un elemento con el ID "secondElement", este fragmento de código lo eliminará del documento.*
