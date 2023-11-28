@@ -90,3 +90,17 @@ li.parentNode.removeChild(li)
 2. *La segunda línea `li.parentNode.removeChild(li)` está eliminando el elemento seleccionado del documento. `li.parentNode` obtiene el nodo padre del elemento seleccionado, que sería el elemento de lista (`<ul>` o `<ol>`) que contiene el elemento de lista (`<li>`) seleccionado. Luego, `removeChild(li)` elimina el elemento seleccionado de este nodo padre.*
 
 *Por lo tanto, si en tu documento HTML tienes un elemento con el ID "secondElement", este fragmento de código lo eliminará del documento.*
+
+```jsx
+let list = document.querySelector('#parentLi');
+let secondLi = list.childNodes[3];
+list.removeChild(secondLi);
+```
+
+*Este fragmento de código JavaScript está eliminando un elemento específico de una lista HTML en el documento.*
+
+1. *La primera línea `let list = document.querySelector('#parentLi');` está seleccionando el primer elemento HTML en el documento que coincide con el selector '#parentLi'. Este selector apunta al elemento con el ID 'parentLi'. La referencia a este elemento se guarda en la variable `list`.*
+2. *La segunda línea `let secondLi = list.childNodes[3];` está seleccionando el cuarto hijo del elemento seleccionado anteriormente. En JavaScript, la propiedad `childNodes` devuelve una colección de nodos hijos, y los índices de esta colección comienzan en 0. Por lo tanto, `childNodes[3]` selecciona el cuarto nodo hijo. Esta referencia se guarda en la variable `secondLi`.*
+3. *La tercera línea `list.removeChild(secondLi);` está eliminando el nodo hijo seleccionado del elemento de lista. `removeChild(secondLi)` elimina el nodo hijo `secondLi` del nodo padre `list`.*
+
+*Por lo tanto, si en tu documento HTML tienes un elemento con el ID 'parentLi' y este elemento tiene al menos cuatro hijos, este fragmento de código eliminará el cuarto hijo de ese elemento.*
