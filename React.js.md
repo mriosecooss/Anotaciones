@@ -131,4 +131,49 @@ Por lo tanto, el resultado de `content` será una tarjeta de Bootstrap que mue
 <h1>#05 Building from arrays</h1>
 
 ```js
+// Only update the value of this array
+const navlinkItems = [
+    <li className="nav-item">
+        <a className="nav-link" href="#">Link to google.com
+        </a>
+    </li>,
+    <li className="nav-item">
+        <a className="nav-link" href="#">Link to facebook.com
+        </a>
+    </li>,
+    <li className="nav-item">
+        <a className="nav-link" href="#">Link to amazon.com
+        </a>
+    </li>,
+];
+
+const content = <ul className="nav">{navlinkItems}</ul>;
 ```
+
+Se define una constante `navlinkItems` que es un array de elementos JSX. Cada elemento del array es un elemento `li` que contiene un elemento `a`. Los elementos `a` tienen la clase "nav-link" y un atributo `href` que, en este caso, no está definido (es decir, `href="#"`), lo que significa que los enlaces no llevarán a ninguna parte. El contenido de cada elemento `a` es un texto que indica a qué sitio web se supone que debe llevar el enlace.
+
+Luego, se crea una constante `content` que contiene un elemento JSX. En este caso, `content` es un elemento `ul` que tiene la clase "nav" y contiene el array `navlinkItems`. Dado que `navlinkItems` es un array de elementos `li`, estos se renderizarán como elementos de lista dentro del elemento `ul`.
+
+---
+<h1>#06 Mapping array to li</h1>
+
+```js
+const animals = ["Horse", "Turtle", "Elephant", "Monkey"];
+
+const animalsInHTML = animals.map((singleAnimal, index) => {
+    return <li key={index}>{singleAnimal}</li>;
+
+});
+```
+
+Este fragmento de código es un ejemplo de cómo se pueden usar arrays, el método `map()` y JSX para crear una lista de elementos en React.
+
+Primero, se define una constante `animals` que es un array de cadenas de texto. Cada cadena de texto representa el nombre de un animal.
+
+Luego, se utiliza el método `map()` para iterar sobre cada elemento en el array `animals`. Para cada elemento, `map()` ejecuta una función que devuelve un elemento JSX `<li>`. Esta función toma dos argumentos: `singleAnimal`, que es el elemento actual del array, y `index`, que es el índice del elemento actual.
+
+Dentro de la función, se devuelve un elemento `<li>` que tiene un atributo `key` igual al índice del elemento y contiene el nombre del animal correspondiente. El atributo `key` ayuda a React a identificar qué elementos han cambiado, se han añadido o se han eliminado, lo que puede mejorar el rendimiento y ayudar a prevenir errores en ciertos casos.
+
+Por lo tanto, el resultado de `animalsInHTML` será un array de elementos `<li>`, cada uno con un atributo `key` único y el nombre de un animal.
+
+---
